@@ -1,0 +1,811 @@
+/* Adverb Section Styles */
+
+.adverb-section {
+    padding: 2rem 0;
+    background: #141e30; /* Same as noun section */
+    min-height: 100vh;
+    color: white;
+    margin-top: 2rem; /* Add top margin for separation from header */
+}
+
+.adverb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-top: 1rem; /* Additional margin for container */
+}
+
+.adverb-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem; /* Add top margin for separation from header */
+    color: white;
+}
+
+.adverb-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: #fbbf24; /* Yellow */
+}
+
+.adverb-intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    color: #9ca3af; /* Grey */
+}
+
+/* Adverb Cards Grid */
+.adverb-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem; /* Add top margin for separation from header */
+}
+
+.adverb-card {
+    background: #1a2c42; /* Same as noun cards */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #243b55;
+    margin-top: 1rem; /* Additional margin for individual cards */
+}
+
+.adverb-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fbbf24, #ec4899); /* Yellow to pink gradient */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.adverb-card:hover::before {
+    transform: scaleX(1);
+}
+
+.adverb-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border-color: #fbbf24; /* Yellow border on hover */
+}
+
+.adverb-card h3 {
+    color: #fbbf24; /* Yellow */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.adverb-card .icon {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #fbbf24, #ec4899); /* Yellow to pink gradient */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e293b; /* Dark text on gradient */
+    font-weight: bold;
+}
+
+.adverb-card p {
+    color: #9ca3af; /* Grey */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.adverb-card .examples {
+    background: #243b55; /* Same as noun section */
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #fbbf24; /* Yellow border */
+}
+
+.adverb-card .examples strong {
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.adverb-card .examples span {
+    color: #fbbf24; /* Yellow */
+    font-weight: 600;
+}
+
+.adverb-card .more-info {
+    background: linear-gradient(135deg, #fbbf24, #ec4899); /* Yellow to pink gradient */
+    color: #1e293b; /* Dark text */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.adverb-card .more-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+}
+
+/* Summary Grid */
+.adverb-summary {
+    background: #1a2c42; /* Same as noun cards */
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #243b55;
+}
+
+.adverb-summary h3 {
+    color: #fbbf24; /* Yellow */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 1rem;
+    background: #141e30; /* Same as noun summary cards */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.summary-item:hover {
+    border-color: #fbbf24; /* Yellow border */
+    transform: translateY(-2px);
+    background: #243b55; /* Same hover effect as noun section */
+}
+
+.summary-item h4 {
+    color: #fbbf24; /* Yellow */
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.summary-item p {
+    color: #9ca3af; /* Grey */
+    font-size: 0.9rem;
+}
+
+/* Adverb Summary Cards */
+.adverb-summary-card {
+    text-align: center;
+    padding: 1rem;
+    background: #141e30;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.adverb-summary-card:hover {
+    border-color: #fbbf24;
+    transform: translateY(-2px);
+    background: #243b55;
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.2);
+}
+
+.adverb-summary-card h4 {
+    color: #fbbf24;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.adverb-summary-card p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+/* Adverb Position Table */
+.adverb-position {
+    background: #1a2c42; /* Same as noun cards */
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #243b55;
+}
+
+.adverb-position h3 {
+    color: #fbbf24; /* Yellow */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.adverb-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #243b55; /* Same as noun section */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.adverb-table th,
+.adverb-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #475569;
+}
+
+.adverb-table th {
+    background: linear-gradient(135deg, #fbbf24, #ec4899); /* Yellow to pink gradient */
+    color: #1e293b; /* Dark text */
+    font-weight: 600;
+}
+
+.adverb-table tr:nth-child(even) {
+    background: #475569; /* Slightly lighter grey */
+}
+
+.adverb-table tr:hover {
+    background: #64748b; /* Light grey on hover */
+}
+
+.adverb-table .highlight {
+    background: #fef3c7; /* Light yellow background */
+    font-weight: 600;
+    color: #92400e; /* Dark yellow text */
+}
+
+/* Usage Examples */
+.usage-examples {
+    background: #1a2c42; /* Same as noun cards */
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #243b55;
+}
+
+.usage-examples h3 {
+    color: #fbbf24; /* Yellow */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.example-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #243b55; /* Same as noun section */
+    border-radius: 10px;
+    border-left: 4px solid #fbbf24; /* Yellow border */
+}
+
+.example-item h4 {
+    color: #fbbf24; /* Yellow */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.example-item .example {
+    background: #475569; /* Slightly lighter grey */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #64748b;
+    color: white;
+}
+
+.example-item .example strong {
+    color: #fbbf24; /* Yellow */
+}
+
+/* Important Notes */
+.important-notes {
+    background: linear-gradient(135deg, #1a2c42, #243b55); /* Same gradient as noun section */
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #ec4899; /* Pink border */
+}
+
+.important-notes h3 {
+    color: #ec4899; /* Pink */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.important-notes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.important-notes li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: #9ca3af; /* Grey */
+    line-height: 1.6;
+}
+
+.important-notes li::before {
+    content: '⚠️';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+}
+
+/* Exercises */
+.adverb-exercises {
+    background: #1a2c42; /* Same as noun cards */
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #243b55;
+}
+
+.adverb-exercises h3 {
+    color: #fbbf24; /* Yellow */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.exercise-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #243b55; /* Same as noun section */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.exercise-item:hover {
+    border-color: #fbbf24; /* Yellow border */
+}
+
+.exercise-item h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.exercise-item .question {
+    background: #475569; /* Slightly lighter grey */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #fbbf24; /* Yellow border */
+    color: white;
+}
+
+.exercise-item .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.exercise-item .option {
+    background: #475569; /* Slightly lighter grey */
+    padding: 1rem;
+    border: 2px solid #64748b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: white;
+}
+
+.exercise-item .option:hover {
+    border-color: #fbbf24; /* Yellow border */
+    background: #64748b; /* Light grey background */
+}
+
+.exercise-item .option.selected {
+    border-color: #fbbf24; /* Yellow border */
+    background: #fef3c7; /* Light yellow background */
+    color: #92400e; /* Dark yellow text */
+}
+
+.exercise-item .option.correct {
+    border-color: #10b981; /* Green border */
+    background: #d1fae5; /* Light green background */
+    color: #065f46; /* Dark green text */
+}
+
+.exercise-item .option.incorrect {
+    border-color: #ef4444; /* Red border */
+    background: #fee2e2; /* Light red background */
+    color: #991b1b; /* Dark red text */
+}
+
+.exercise-item .check-answer {
+    background: linear-gradient(135deg, #fbbf24, #ec4899); /* Yellow to pink gradient */
+    color: #1e293b; /* Dark text */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.exercise-item .check-answer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+}
+
+.exercise-item .show-answer {
+    background: #64748b; /* Grey */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.exercise-item .show-answer:hover {
+    background: #475569; /* Darker grey */
+}
+
+.exercise-item .answer {
+    background: #d1fae5; /* Light green background */
+    color: #065f46; /* Dark green text */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid #10b981; /* Green border */
+    display: none;
+}
+
+.exercise-item .explanation {
+    background: #fef3c7; /* Light yellow background */
+    color: #92400e; /* Dark yellow text */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    border-left: 4px solid #fbbf24; /* Yellow border */
+    display: none;
+}
+
+/* Modal Styles */
+.adverb-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #243b55; /* Same as noun section */
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+    border: 2px solid #fbbf24; /* Yellow border */
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #334155;
+}
+
+.modal-header h3 {
+    color: #fbbf24; /* Yellow */
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #9ca3af; /* Grey */
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #fbbf24; /* Yellow */
+}
+
+.modal-body {
+    line-height: 1.6;
+    color: white;
+}
+
+.modal-body h4 {
+    color: #fbbf24; /* Yellow */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+    color: #9ca3af; /* Grey */
+}
+
+.modal-body .example-list {
+    background: #1a2c42; /* Same as noun cards */
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #fbbf24; /* Yellow border */
+}
+
+.modal-body .example-list h5 {
+    color: #ec4899; /* Pink */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.modal-body .example-list p {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body .example-list li {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.modal-body .example-list strong {
+    color: #fbbf24; /* Yellow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .adverb-container {
+        padding: 0 1rem;
+        margin-top: 0.5rem; /* Reduce margin on mobile */
+    }
+    
+    .adverb-intro {
+        margin-top: 1rem; /* Reduce margin on mobile */
+    }
+    
+    .adverb-cards {
+        margin-top: 1rem; /* Reduce margin on mobile */
+    }
+    
+    .adverb-card {
+        margin-top: 0.5rem; /* Reduce margin on mobile */
+    }
+    
+    .adverb-intro h2 {
+        font-size: 2rem;
+    }
+    
+    .adverb-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .summary-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .adverb-table {
+        font-size: 0.9rem;
+    }
+    
+    .adverb-table th,
+    .adverb-table td {
+        padding: 0.5rem;
+    }
+    
+    .exercise-item .options {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .adverb-intro h2 {
+        font-size: 1.8rem;
+    }
+    
+    .adverb-intro p {
+        font-size: 1rem;
+    }
+    
+    .adverb-card {
+        padding: 1.5rem;
+    }
+    
+    .adverb-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .adverb-card,
+    .summary-item,
+    .exercise-item .option,
+    .modal-content {
+        transition: none;
+    }
+    
+    @keyframes modalSlideIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+/* Focus styles for accessibility */
+.adverb-card:focus,
+.exercise-item .option:focus,
+.more-info:focus,
+.check-answer:focus,
+.show-answer:focus,
+.close-modal:focus {
+    outline: 2px solid #fbbf24; /* Yellow outline */
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .adverb-card {
+        border: 2px solid #fbbf24; /* Yellow border */
+    }
+    
+    .adverb-table th,
+    .adverb-table td {
+        border: 2px solid #fbbf24; /* Yellow border */
+    }
+    
+    .exercise-item .option {
+        border: 2px solid #fbbf24; /* Yellow border */
+    }
+}
+
+/* Exercise Lists */
+.exe-1-list, .exe-2-list, .exe-3-list, .exe-list-answers {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.exe-1-list li, .exe-2-list li, .exe-3-list li, .exe-list-answers li {
+    background: #243b55;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #fbbf24;
+    transition: all 0.3s ease;
+    animation: slideInLeft 0.5s ease forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.exe-1-list li:nth-child(1), .exe-2-list li:nth-child(1), .exe-3-list li:nth-child(1) { animation-delay: 0.1s; }
+.exe-1-list li:nth-child(2), .exe-2-list li:nth-child(2), .exe-3-list li:nth-child(2) { animation-delay: 0.2s; }
+.exe-1-list li:nth-child(3), .exe-2-list li:nth-child(3), .exe-3-list li:nth-child(3) { animation-delay: 0.3s; }
+.exe-1-list li:nth-child(4), .exe-2-list li:nth-child(4), .exe-3-list li:nth-child(4) { animation-delay: 0.4s; }
+.exe-1-list li:nth-child(5), .exe-2-list li:nth-child(5), .exe-3-list li:nth-child(5) { animation-delay: 0.5s; }
+.exe-1-list li:nth-child(6), .exe-2-list li:nth-child(6), .exe-3-list li:nth-child(6) { animation-delay: 0.6s; }
+.exe-1-list li:nth-child(7), .exe-2-list li:nth-child(7), .exe-3-list li:nth-child(7) { animation-delay: 0.7s; }
+.exe-1-list li:nth-child(8), .exe-2-list li:nth-child(8), .exe-3-list li:nth-child(8) { animation-delay: 0.8s; }
+
+.exe-1-list li:hover, .exe-2-list li:hover, .exe-3-list li:hover, .exe-list-answers li:hover {
+    background: #1a2c42;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.2);
+}
+
+.exe-1-list li p, .exe-2-list li p, .exe-3-list li p, .exe-list-answers li p {
+    margin: 0;
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Exercise Sections */
+.exercise-1, .exercise-2, .exercise-3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.exercise-1.visible, .exercise-2.visible, .exercise-3.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.exercises-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.exercises-heading h3 {
+    color: #fbbf24;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Exercise Answer Sections */
+.exercise-1-answers, .exercise-2-answers, .exercise-3-answers {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.exercise-1-answers:hover, .exercise-2-answers:hover, .exercise-3-answers:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.2);
+}

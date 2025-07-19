@@ -1,0 +1,35 @@
+/* Interjection Card Hover Effect */
+.interjection-card, .interjection-summary-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.interjection-card:hover, .interjection-summary-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px 0 rgba(251, 191, 36, 0.3), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+/* Shiny Slide Effect */
+.interjection-card::before, .interjection-summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.10) 100%);
+  transform: skewX(-20deg);
+  transition: left 0.5s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+}
+.interjection-card:hover::before, .interjection-summary-card:hover::before {
+  left: 120%;
+}
+
+/* Highlight on focus for accessibility */
+.interjection-card:focus, .interjection-summary-card:focus {
+  outline: 2px solid #facc15;
+  outline-offset: 2px;
+}

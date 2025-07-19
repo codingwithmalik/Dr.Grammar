@@ -1,0 +1,536 @@
+/* Adjective Cards Interactive Styles */
+
+/* Card Base Styles */
+.adjective-card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.adjective-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.adjective-card:hover::before {
+  left: 100%;
+}
+
+.adjective-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Icon Container Animations */
+.adjective-card .w-12 {
+  transition: all 0.3s ease;
+}
+
+.adjective-card:hover .w-12 {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* Card Content Animations */
+.adjective-card .bg-\[#243b55\] {
+  transition: all 0.3s ease;
+}
+
+.adjective-card:hover .bg-\[#243b55\] {
+  background-color: rgba(36, 59, 85, 0.8);
+  transform: translateX(5px);
+}
+
+/* Arrow Animation */
+.adjective-card .fa-chevron-right {
+  transition: transform 0.3s ease;
+}
+
+.adjective-card:hover .fa-chevron-right {
+  transform: translateX(5px);
+}
+
+/* Summary Cards */
+.adjective-summary-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.adjective-summary-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  transition: width 0.3s ease;
+}
+
+.adjective-summary-card:hover::after {
+  width: 100%;
+}
+
+.adjective-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.adjective-summary-card i {
+  transition: all 0.3s ease;
+}
+
+.adjective-summary-card:hover i {
+  transform: scale(1.2);
+}
+
+/* Modal Styles */
+#adjectiveModal {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+#adjectiveModal .bg-\[#243b55\] {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Active Card States */
+.adjective-card.active {
+  border-color: #fbbf24;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.adjective-summary-card.active {
+  background-color: #243b55 !important;
+  border: 2px solid #fbbf24;
+}
+
+/* Pulse Animation for Interactive Elements */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.adjective-card:hover .w-12 {
+  animation: pulse 2s infinite;
+}
+
+/* Gradient Text Effects */
+.adjective-card h3 {
+  background: linear-gradient(45deg, #fbbf24, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .adjective-card {
+    margin-bottom: 1rem;
+  }
+  
+  .adjective-summary-card {
+    padding: 0.75rem;
+  }
+  
+  .adjective-summary-card i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Loading Animation for Cards */
+.adjective-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.adjective-card:nth-child(1) { animation-delay: 0.1s; }
+.adjective-card:nth-child(2) { animation-delay: 0.2s; }
+.adjective-card:nth-child(3) { animation-delay: 0.3s; }
+.adjective-card:nth-child(4) { animation-delay: 0.4s; }
+.adjective-card:nth-child(5) { animation-delay: 0.5s; }
+.adjective-card:nth-child(6) { animation-delay: 0.6s; }
+.adjective-card:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects for Interactive Elements */
+.adjective-card .text-xs {
+  transition: color 0.3s ease;
+}
+
+.adjective-card:hover .text-xs {
+  color: #fbbf24;
+}
+
+/* Card Border Glow Effect */
+.adjective-card:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(251, 191, 36, 0.1),
+    0 0 20px rgba(251, 191, 36, 0.1);
+}
+
+/* Summary Section Enhancements */
+.bg-gradient-to-r.from-\[#1a2c42\].to-\[#243b55\] {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-to-r.from-\[#1a2c42\].to-\[#243b55\]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Interactive Feedback */
+.adjective-card:active {
+  transform: scale(0.98);
+}
+
+.adjective-summary-card:active {
+  transform: scale(0.95);
+}
+
+/* Accessibility Enhancements */
+.adjective-card:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+.adjective-summary-card:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .adjective-card,
+  .adjective-summary-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .adjective-card:hover,
+  .adjective-summary-card:hover {
+    transform: none;
+  }
+}
+
+/* Enhanced Responsive Design for Adjective Cards */
+
+/* Base responsive improvements */
+@media (max-width: 1200px) {
+  .adjective-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .adjective-summary-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .adjective-card {
+    padding: 1.25rem;
+  }
+  
+  .adjective-summary-card {
+    padding: 0.75rem;
+  }
+  
+  .adjective-summary-card i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Card adjustments */
+  .adjective-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .adjective-card .w-12 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .adjective-card .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .adjective-card h3 {
+    font-size: 1.125rem;
+  }
+  
+  /* Summary cards */
+  .adjective-summary-card {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .adjective-summary-card i {
+    font-size: 1.5rem;
+  }
+  
+  .adjective-summary-card .text-sm {
+    font-size: 0.75rem;
+  }
+  
+  .adjective-summary-card .text-xs {
+    font-size: 0.625rem;
+  }
+  
+  /* Modal adjustments */
+  #adjectiveModal .bg-\[#243b55\] {
+    margin: 1rem;
+    max-height: 90vh;
+  }
+  
+  #modalTitle {
+    font-size: 1.5rem;
+  }
+  
+  /* Grid adjustments */
+  .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-7 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Extra small devices */
+  .adjective-card {
+    padding: 0.75rem;
+  }
+  
+  .adjective-card .flex.items-center.gap-4 {
+    gap: 0.75rem;
+  }
+  
+  .adjective-card .w-12 {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .adjective-card .text-2xl {
+    font-size: 1rem;
+  }
+  
+  /* Summary cards */
+  .adjective-summary-card {
+    padding: 0.5rem;
+  }
+  
+  .adjective-summary-card i {
+    font-size: 1.25rem;
+  }
+  
+  /* Grid adjustments */
+  .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-7 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* Modal full screen on mobile */
+  #adjectiveModal {
+    padding: 0;
+  }
+  
+  #adjectiveModal .bg-\[#243b55\] {
+    margin: 0;
+    border-radius: 0;
+    max-height: 100vh;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very small devices */
+  .adjective-card {
+    padding: 0.5rem;
+  }
+  
+  .adjective-card h3 {
+    font-size: 1rem;
+  }
+  
+  /* Summary cards */
+  .adjective-summary-card {
+    padding: 0.25rem;
+  }
+  
+  .adjective-summary-card i {
+    font-size: 1rem;
+  }
+  
+  .adjective-summary-card .text-sm {
+    font-size: 0.625rem;
+  }
+  
+  .adjective-summary-card .text-xs {
+    font-size: 0.5rem;
+  }
+  
+  /* Grid adjustments for very small screens */
+  .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-7 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+  .adjective-card {
+    padding: 0.5rem;
+  }
+  
+  .adjective-summary-card {
+    padding: 0.25rem;
+  }
+  
+  #adjectiveModal .bg-\[#243b55\] {
+    max-height: 95vh;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .adjective-card:hover,
+  .adjective-summary-card:hover {
+    transform: none;
+  }
+  
+  .adjective-card:active,
+  .adjective-summary-card:active {
+    transform: scale(0.98);
+  }
+  
+  /* Larger touch targets */
+  .adjective-summary-card {
+    min-height: 80px;
+  }
+  
+  .adjective-card {
+    min-height: 120px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .adjective-card,
+  .adjective-summary-card {
+    transition: none;
+  }
+  
+  .adjective-card:hover,
+  .adjective-summary-card:hover {
+    transform: none;
+  }
+  
+  .adjective-card .w-12 {
+    animation: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-contrast: high) {
+  .adjective-card,
+  .adjective-summary-card {
+    border: 2px solid #fff;
+  }
+  
+  .text-gray-300 {
+    color: #fff !important;
+  }
+  
+  .text-gray-400 {
+    color: #ccc !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .adjective-card,
+  .adjective-summary-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .grid {
+    display: block;
+  }
+  
+  .adjective-card {
+    page-break-inside: avoid;
+  }
+  
+  #adjectiveModal {
+    display: none !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .adjective-card,
+  .adjective-summary-card {
+    border-width: 0.5px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .adjective-card,
+  .adjective-summary-card {
+    background-color: #1a2c42;
+  }
+  
+  .bg-\[#243b55\] {
+    background-color: #1a2c42;
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with Dr.Grammer. Have a question or feedback? Contact us today!"
+    />
+    <title>Contact Us | Dr.Grammer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #141e30, #243b55);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+      }
+
+      .text-color {
+        color: #f6b41f;
+      }
+
+      .border-color {
+        border-color: #f6b41f;
+      }
+
+      .fade-down {
+        animation: fadeDown 0.5s ease-out forwards;
+      }
+
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("7sOoM3S3Pbzkai5Hb"); // Replace with your EmailJS Public Key
+      })();
+    </script>
+  </head>
+
+  <body class="font-sans leading-relaxed">
+    <!-- Return Button -->
+    <div class="fixed bottom-4 left-4 z-50">
+      <a
+        href="/index.html"
+        class="bg-[#141e30] hover:bg-[#243b55] text-white px-4 py-2 rounded-lg shadow-lg transition-colors duration-200 flex items-center gap-2"
+      >
+        <i class="fas fa-arrow-left"></i>
+        <span class="hidden sm:inline">Return to Home</span>
+        <span class="sm:hidden">Home</span>
+      </a>
+    </div>
+
+    <!-- Contact Us Section -->
+    <section class="bg-[#141e30] py-20 px-4 sm:px-6 md:px-20 fade-down">
+      <div
+        class="max-w-4xl mx-auto bg-[#243b55] rounded-2xl shadow-lg p-8 sm:p-12 space-y-10"
+      >
+        <div class="space-y-4 text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">
+            Have Questions or Suggestions?
+          </h2>
+          <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
+            We'd love to hear from you! Whether it's feedback, a question, or
+            just a hello — drop us a message and we'll get back to you soon.
+          </p>
+        </div>
+
+        <form class="space-y-6" id="contact-form">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm text-gray-300 mb-1"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="from_name"
+                required
+                class="w-full bg-[#1e2a3a] text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm text-gray-300 mb-1"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="from_email"
+                required
+                class="w-full bg-[#1e2a3a] text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm text-gray-300 mb-1"
+              >Subject</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="w-full bg-[#1e2a3a] text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm text-gray-300 mb-1"
+              >Your Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full bg-[#1e2a3a] text-white border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-[#f6b41f] text-[#141e30] font-semibold px-6 py-2 rounded-lg hover:bg-yellow-400 transition duration-200 shadow-md"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+
+        <!-- Social Links -->
+        <div class="pt-10 border-t border-white/10 text-center">
+          <p class="text-lg font-semibold mb-4 text-white">
+            Or reach us directly:
+          </p>
+          <div class="flex flex-col items-center gap-4 text-base text-white">
+            <a
+              href="mailto:codingwithmalik0@gmail.com"
+              class="hover:text-yellow-400 transition flex items-center gap-2"
+            >
+              <i class="fas fa-envelope"></i>
+              codingwithmalik0@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/codingwmalik"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-yellow-400 transition flex items-center gap-2"
+            >
+              <i class="fab fa-instagram"></i>
+              @CodingWithMalik
+            </a>
+            <a
+              href="https://www.youtube.com/@CodingWithMalik"
+              target="_blank"
+              rel="noopener"
+              class="hover:text-yellow-400 transition flex items-center gap-2"
+            >
+              <i class="fab fa-youtube"></i>
+              @CodingWithMalik
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center border-t border-white/10 text-gray-400 text-sm fade-down"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <p>&copy; 2025 Dr.Grammer. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          emailjs.sendForm("service_9hte1ps", "template_1u0k42q", this).then(
+            () => {
+              alert("✅ Message sent successfully!");
+              this.reset();
+            },
+            (error) => {
+              alert("❌ Failed to send message. Please try again.");
+              console.error("EmailJS Error:", error);
+            }
+          );
+        });
+    </script>
+  </body>
+</html>

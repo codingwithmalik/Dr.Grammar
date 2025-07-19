@@ -1,0 +1,271 @@
+.phrase-card {
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.phrase-card:hover {
+  transform: scale(1) translateY(-4px);
+}
+
+/* Glass shine effect */
+.phrase-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+.phrase-card:hover::after {
+  animation: shiny-sweep 0.9s linear;
+  opacity: 1;
+}
+
+@keyframes shiny-sweep {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    left: 100%;
+    opacity: 0.5;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+/* Exercises Section Styling */
+.exercises-section {
+  background: linear-gradient(120deg, #1a2c42 80%, #243b55 100%);
+  border-left: 4px solid #e879f9;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.15);
+}
+.exercises-section h3 {
+  color: #facc15;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.exercises-section ol {
+  margin-left: 1rem;
+}
+.exercises-section li {
+  transition: background 0.2s;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+.exercises-section li:hover {
+  background: rgba(100, 43, 107, 0.08);
+}
+.exercises-section ul li {
+  background: none;
+  padding-left: 0;
+}
+
+/* Solutions Section Styling */
+.solutions-section {
+  background: linear-gradient(120deg, #18263a 80%, #243b55 100%);
+  border-left: 4px solid #facc15;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12);
+}
+.solutions-section h3 {
+  color: #facc15;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.solutions-section ol {
+  margin-left: 1rem;
+}
+.solutions-section li {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+.solutions-section ul li {
+  background: none;
+  padding-left: 0;
+}
+
+.summary-card,
+.clause-card,
+.tense-card,
+.sentence-card,
+.figures-card,
+.punctuation-card,
+.instruction-card,
+.order-card,
+.spelling-card,
+.conjunction-card,
+.idiom-card {
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.summary-card:hover,
+.clause-card:hover,
+.tense-card:hover,
+.sentence-card:hover,
+.figures-card:hover,
+.punctuation-card:hover,
+.instruction-card:hover,
+.order-card:hover,
+.spelling-card:hover,
+.conjunction-card:hover,
+.idiom-card:hover {
+  transform: scale(1) translateY(-4px);
+}
+.summary-card::after,
+.clause-card::after,
+.tense-card::after,
+.sentence-card::after,
+.figures-card::after,
+.punctuation-card::after,
+.instruction-card::after,
+.order-card::after,
+.spelling-card::after,
+.conjunction-card::after,
+.idiom-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+.summary-card:hover::after,
+.clause-card:hover::after,
+.tense-card:hover::after,
+.sentence-card:hover::after,
+.figures-card:hover::after,
+.punctuation-card:hover::after,
+.instruction-card:hover::after,
+.order-card:hover::after,
+.spelling-card:hover::after,
+.conjunction-card:hover::after,
+.idiom-card:hover::after {
+  animation: shiny-sweep 0.9s linear;
+  opacity: 1;
+}
+
+/* --- Shiny hover effect for cards  */
+@keyframes shiny-sweep {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    left: 100%;
+    opacity: 0.5;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+/* CSS Animations */
+.additional-idiom {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-10px);
+}
+
+.additional-idiom.show {
+    opacity: 1;
+    max-height: 50px;
+    transform: translateY(0);
+}
+
+.fade-in {
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button-pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Sticky See Less button for mobile/tablet */
+@media (max-width: 900px) {
+  #see-more-idioms.see-less-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100vw;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+    padding: 1rem 0;
+    background: #ffe066;
+    color: #243b55;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  #see-more-idioms.see-less-sticky:hover {
+    background: #ffd43b;
+  }
+}

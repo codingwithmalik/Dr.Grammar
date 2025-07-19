@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Master English grammar with Dr.Grammer - Your ultimate guide to perfect English! Learn grammar rules, composition techniques, and writing skills through interactive lessons, clear explanations, and practical examples. Start your journey to flawless English today!"
+    />
+    <title>Dr.Grammer | Master Grammar & Composition with Confidence</title>
+
+    <!-- External CSS and JavaScript -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Page Loader -->
+    <!-- Shows while page is loading -->
+    <div class="page-loader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+      <!-- Navigation Bar -->
+      <nav
+        class="nav header-shadow sticky top-0 z-50 px-4 sm:px-6 md:px-10 py-3 fade-down"
+        style="animation-delay: 0.1s"
+      >
+        <!-- Left: Site Title -->
+        <h1>
+          <div
+            class="text-white font-extrabold text-base sm:text-lg md:text-xl select-none whitespace-nowrap flex items-center gap-2"
+          >
+            <i class="fas fa-book text-color"></i>
+            DR.GRAMMER
+          </div>
+        </h1>
+
+        <!-- Right: Search and Menu Section -->
+        <div class="search-container flex items-center space-x-2 md:space-x-4">
+          <!-- Search Bar -->
+          <div
+            class="relative flex-grow md:flex-grow-0 max-w-full md:max-w-[300px]"
+          >
+            <input
+              aria-label="Search input"
+              class="search-bar"
+              id="searchInput"
+              placeholder="Search..."
+              type="text"
+            />
+          </div>
+
+          <!-- Search Button -->
+          <button
+            aria-label="Toggle search bar"
+            class="text-white focus:outline-none"
+            id="searchBtn"
+            type="button"
+          >
+            <i
+              class="fas fa-search hover:text-gray-300 text-lg"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            aria-label="Toggle menu"
+            class="text-white focus:outline-none"
+            id="menuBtn"
+            type="button"
+          >
+            <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+          </button>
+
+          <!-- Navigation Links -->
+          <ul
+            class="hidden md:items-center space-x-3 text-white font-bold text-xs sm:text-sm md:text-base nav-links"
+            id="navLinks"
+          >
+            <!-- Home Link -->
+            <li
+              class="nav-link cursor-pointer hover:text-gray-300 whitespace-nowrap"
+            >
+              <a
+                href="index.html"
+                class="text-white hover:text-gray-300 no-underline"
+                ><i class="fas fa-home"></i
+              ></a>
+            </li>
+
+            <!-- Grammar Menu -->
+            <li
+              class="nav-link cursor-pointer relative whitespace-nowrap"
+              id="GrammarMenu"
+            >
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 no-underline flex items-center gap-1 focus-visible:outline-none focus-visible:underline focus-visible:bg-[rgba(255,255,255,0.1)] px-2 py-1 rounded transition-colors duration-200"
+                tabindex="0"
+                id="GrammarToggle"
+              >
+                GRAMMAR
+                <i
+                  class="fas fa-caret-down text-xs ml-1"
+                  aria-hidden="true"
+                  id="GrammarCaret"
+                ></i>
+              </a>
+              <!-- Grammar Submenu -->
+              <div
+                class="hidden focus-within:flex transform mt-2 bg-[#141e30] shadow-lg rounded-lg p-3 z-50 min-w-[200px] max-w-xs mx-auto flex-col grammar-submenu"
+                id="GrammarSubmenu"
+              >
+                <ul
+                  class="space-y-2 text-sm flex flex-col items-center w-full"
+                  id="grammarlist"
+                >
+                  <!-- Grammar Menu Items -->
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#noun"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >NOUN</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#adjective"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >ADJECTIVE</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#pronoun"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >PRONOUN</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#adverb"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >ADVERB</a
+                    >
+                  </li>
+
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#verb"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >VERB</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#infinitives"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >INFINITIVES</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#gerund"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >GERUND</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#conjunction"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >CONJUNCTIONS</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#interjection"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >INTERJECTIONS</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#article"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >ARTICLES</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#preposition"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >PREPOSITION</a
+                    >
+                  </li>
+                  <li class="w-full" id="grammar-sublinks">
+                    <a
+                      href="/grammar/grammar.html#participle"
+                      class="text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >PARTICIPLES</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Composition Menu -->
+            <li
+              class="nav-link cursor-pointer hover:text-gray-300 flex items-center gap-1 whitespace-nowrap"
+              id="CompositionMenu"
+            >
+              <a
+                href="#"
+                class="text-white hover:text-gray-300 no-underline text-white hover:text-gray-300 no-underline flex items-center gap-1 focus-visible:outline-none focus-visible:underline focus-visible:bg-[rgba(255,255,255,0.1)] px-2 py-1 rounded transition-colors duration-200"
+              >
+                COMPOSITION
+                <i
+                  class="fas fa-caret-down text-xs"
+                  aria-hidden="true"
+                  id="CompositionCaret"
+                ></i>
+              </a>
+              <!-- Composition Submenu -->
+              <div class="comp-menu hidden">
+                <ul class="compsubmenu">
+                  <!-- Sentence Structure Section -->
+                  <li class="compsublinks" id="SentenceStructureToggle">
+                    <a href="#">
+                      Sentence Structure
+
+                      <i
+                        class="fas fa-caret-down text-xs ml-1"
+                        aria-hidden="true"
+                        id="SentenceStructureCaret"
+                      ></i>
+                    </a>
+                    <ul
+                      class="SentStructsubmenu hidden class"
+                      id="SentenceStructureMenu"
+                    >
+                      <li
+                        class="SentStruct-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="/composition/composition.html#sentence-type"
+                          >Types of Sentences</a
+                        >
+                      </li>
+                      <li
+                        class="SentStruct-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="/composition/composition.html#phrase-type"
+                          >Types of Phrases</a
+                        >
+                      </li>
+                      <li
+                        class="SentStruct-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="/composition/composition.html#clause-type"
+                          >Types of Clauses</a
+                        >
+                      </li>
+                      <li
+                        class="SentStruct-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="/composition/composition.html#tenses"
+                          >Tenses</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Correct Usage Section -->
+                  <li class="compsublinks" id="CorrectUsageToggle">
+                    <a href="#">
+                      Correct Usage
+                      <i
+                        class="fas fa-caret-down text-xs ml-1"
+                        aria-hidden="true"
+                        id="CorrectUsageCaret"
+                      ></i>
+                    </a>
+                    <ul
+                      class="correctusage-submenu hidden"
+                      id="CorrectUsageMenu"
+                    >
+                      <!-- Correct Usage Menu Items -->
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#subj-verb-agreement">Subject Verb Agreement</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#correct-usage-adjectives-adverbs">Adjectives & Adverbs</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#formation-words">Formation of words</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#crt-usg-nouns-prnouns">Nouns & Pronouns</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#figures-of-speech">Figures of Speech</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#order-of-words">Order of words</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#spelling-rules">Spelling Rules</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#punctuations">Punctuations</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#crt-conjunctions">Conjunctions</a>
+                      </li>
+                      <li
+                        class="correctusage-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#crt-idioms">Idioms</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Written Composition Section -->
+                  <li class="compsublinks" id="WrittenCompositionToggle">
+                    <a href="#">
+                      Written Composition
+                      <i
+                        class="fas fa-caret-down text-xs ml-1"
+                        aria-hidden="true"
+                        id="WrittenCompositionCaret"
+                      >
+                      </i>
+                    </a>
+                    <ul
+                      class="writtencomp-submenu hidden"
+                      id="WrittenCompositionMenu"
+                    >
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#expansion-passages">Expansion of Passages</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#poetry-appreciation">Poetry Appreciation</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#paragraph-writing">Paragraph Writing</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#remake-story">Remake of a Story</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#autobiographies">Autobiographies</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#dialogue-writing">Dialogue Writing</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#comprehension">Comprehension</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#comprehension">Story Writing</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#story-writing">Letter Writing</a>
+                      </li>
+
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#precis-writing">Precis-Writing</a>
+                      </li>
+
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#essay-writing">Essay Writing</a>
+                      </li>
+
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#paraphrasing">Paraphrasing</a>
+                      </li>
+                      <li
+                        class="writtencomp-links text-white hover:text-gray-300 block px-3 py-1.5 w-full text-center rounded hover:bg-[rgba(255,255,255,0.1)] focus:bg-[rgba(255,255,255,0.15)] focus:outline-none transition-colors duration-200"
+                      >
+                        <a href="composition/composition.html#abbreviations">Abbreviations</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- About Us Link -->
+            <li
+              class="nav-link cursor-pointer hover:text-gray-300 whitespace-nowrap"
+            >
+              <a
+                href="/about/about.html"
+                class="text-white hover:text-gray-300 no-underline"
+                >ABOUT US</a
+              >
+            </li>
+
+            <!-- Queries Link -->
+            <li
+              class="nav-link cursor-pointer hover:text-gray-300 whitespace-nowrap"
+            >
+              <a
+                href="/contact/cus.html"
+                class="text-white hover:text-gray-300 no-underline"
+                >QUERIES</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="mainContent">
+    <!-- Main Content Section -->
+    <main
+      class="max-w-7xl mx-auto mt-12 rounded-xl mb-4 p-4 sm:p-6 md:p-8 select-none fade-down shadow-xl pb-16 md:pb-8"
+      style="animation-delay: 0.3s"
+    >
+      <!-- Main Title -->
+      <h2
+        class="learn-qst text-center font-semibold italic mb-4"
+        style="font-family: 'Roboto Slab', serif"
+      >
+        Wanna Learn Grammar?
+      </h2>
+
+      <!-- Welcome Section -->
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-12 mb-6"
+      >
+        <!-- Welcome Text -->
+        <div
+          class="md:w-1/2 content-section opacity-0 translate-y-10"
+          id="textyellow"
+        >
+          <h3
+            class="Guide-heading font-extrabold text-base sm:text-lg md:text-xl mb-2 drop-shadow-[0_1px_1px_rgba(0,128,0,0.7)] text-center"
+          >
+            Welcome to Your Guide to Perfect English Grammar!
+          </h3>
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed font-mono">
+            If English grammar feels confusing, you're not alone. We're here to
+            make things simple and clear. With easy tips and real examples,
+            you'll learn fast. Let's make good grammar feel easy—and even fun!
+          </p>
+        </div>
+
+        <!-- Welcome Image -->
+        <div
+          class="md:w-1/2 flex flex-col items-center content-section opacity-0 translate-x-10"
+        >
+          <img
+            alt="Illustration showing grammar concepts with icons for language, policy, learning, writing, speech, and reference book"
+            class="w-full rounded-lg img-animate max-w-[280px]"
+            height="auto"
+            id="grammar-img"
+            src="https://storage.googleapis.com/a1aa/image/deb3f562-b4fd-4a6f-2d69-37df2e76521c.jpg"
+            width="280"
+          />
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-gray-300 my-6 rounded" />
+
+      <!-- Cards Section -->
+      <section
+        class="max-w-7xl mx-auto mt-10 px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+        <!-- Card 1: Introduction -->
+        <div
+          class="card-gradient-1 rounded-xl p-6 text-white shadow-lg flex flex-col card-hover reveal-staggered"
+        >
+          <h3 class="font-extrabold text-xl mb-4">
+            Introduction to Grammar and Composition
+          </h3>
+          <img
+            alt="Illustration of people studying English grammar with an open book showing parts of speech and tenses"
+            class="rounded-lg mb-4"
+            src="https://storage.googleapis.com/a1aa/image/29cb321d-a3df-4ce3-ea22-9ba240e4d6e2.jpg"
+          />
+          <p class="text-sm leading-relaxed flex-grow">
+            Writing helps us share our thoughts, tell stories, and explain
+            ideas. To become great writers, we need to understand two important
+            things: grammar and composition.
+          </p>
+        </div>
+
+        <!-- Card 2: What is Grammar -->
+        <div
+          class="card-gradient-2 rounded-xl p-6 text-white shadow-lg flex flex-col card-hover reveal-staggered"
+        >
+          <h3 class="font-extrabold text-xl mb-4">What is Grammar?</h3>
+          <p
+            class="text-sm leading-relaxed flex-grow max-w-[280px] max-h-[200px]"
+          >
+            Grammar is the set of rules that helps us write and speak correctly.
+            It teaches us how to build sentences and use the right words. Using
+            good grammar makes our writing easier to read and understand.
+          </p>
+          <ul class="custom-list mt-12">
+            <li class="custom-bullet">When to use capital letters</li>
+            <li>How to use punctuation (like periods and commas)</li>
+            <li>What nouns, verbs, and adjectives are</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: What is Composition -->
+        <div
+          class="card-gradient-3 rounded-xl p-6 text-white shadow-lg flex flex-col card-hover reveal-staggered"
+        >
+          <h3 class="font-extrabold text-xl mb-4">What is Composition?</h3>
+          <p class="text-sm leading-relaxed flex-grow">
+            Composition means putting our ideas together in a clear and
+            organized way. It helps us write stories, letters, or reports that
+            others enjoy reading. Persuasive writing tries to make the reader
+            agree with you.
+          </p>
+          <ul class="list-disc list-inside text-[#ff7f50] space-y-0.5 mt-4">
+            <li>Narrative – tells a story</li>
+            <li>Descriptive – describes a person or place</li>
+            <li>Expository – explains something</li>
+            <li>Persuasive – tries to make the reader agree with you</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Why It Matters -->
+        <div
+          class="card-gradient-4 rounded-xl p-6 text-white shadow-lg flex flex-col card-hover reveal-staggered"
+        >
+          <h3 class="font-extrabold text-xl mb-4">Why It Matters?</h3>
+          <div class="flex flex-col items-center gap-4">
+            <p class="text-sm leading-relaxed flex-grow">
+              Grammar and composition work together to make your writing strong,
+              clear, and fun to read. The more you practice, the better you'll
+              get!
+            </p>
+            <img
+              alt="Importance of grammar illustration"
+              class="importance-img"
+              src="https://storage.googleapis.com/a1aa/image/0e91f78e-b176-4326-c896-7118b8b7a59a.jpg"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+    <!-- Footer Section -->
+    <footer
+      class="text-white font-extrabold text-base sm:text-lg md:text-xl select-none fade-down"
+      style="animation-delay: 0.5s"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 sm:gap-0 px-4 sm:px-6 md:px-10 py-4"
+      >
+        <!-- Contact Text -->
+        <div>Contact Us on</div>
+
+        <!-- Social Media Links -->
+        <div class="flex space-x-6 text-2xl">
+          <a
+            aria-label="Instagram"
+            class="hover:text-gray-300"
+            href="https://www.instagram.com/codingwmalik"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a
+            aria-label="Facebook"
+            class="hover:text-gray-300"
+            href="https://www.facebook.com/profile.php?id=61561121007346&sk=about"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a
+            aria-label="YouTube"
+            class="hover:text-gray-300"
+            href="https://www.youtube.com/@CodingWithMalik"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Copyright Text -->
+        <div class="hover:text-gray-300">
+          All rights reserved |
+          <a href="/privacy.html" class=" hover:text-blue-300">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
